@@ -13,8 +13,11 @@ https://www.cmc.ca/qsg-fpga-gpu-cluster/
 # Test Tensorflow
 ## Test Tensorflow on terminal
 > source /CMC/accelerator/anaconda3/bin/activate
+
 > conda activate /CMC/accelerator/anaconda3/envs/tensorflow
+ 
 > python test_tensorflow.py
+ 
 >	conda deactivate
 ## Test Tensorflow on Jupyter
 ### Register your Environment by using the following command:
@@ -25,7 +28,9 @@ https://www.cmc.ca/qsg-fpga-gpu-cluster/
 # Test Pytorch
 ## Test Pytorch on terminal
 > source /CMC/accelerator/anaconda3/bin/activate
+
 > conda activate /CMC/accelerator/anaconda3/envs/torch
+
 > python test_pytorch.py
 ## Test Pytorch on Jupyter
 ### Register your Environment by using the following command:
