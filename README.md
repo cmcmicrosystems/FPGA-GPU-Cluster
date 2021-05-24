@@ -7,6 +7,7 @@ https://www.cmc.ca/qsg-fpga-gpu-cluster/
 
 ## Copy the necessary files to your home directory
 > cp -R /CMC/accelerator/GetStarted/ .
+
 > cd GetStarted
 
 # Test Tensorflow
