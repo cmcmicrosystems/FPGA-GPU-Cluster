@@ -11,7 +11,7 @@ The FPGA/GPU cluster supports three the most commonly used deep learning framewo
 This quick guide provides instructions on how to reserve, access, manage, and use the FPGA/GPU cluster nodes through the CMC cloud environment interface.
 https://www.cmc.ca/qsg-fpga-gpu-cluster/
 
-## Quick Start Guide: Tensorflow with Docker
+## Getting Started with TensorFlow and Docker: A Quick Guide
 
 ### Setting up the Environment
 
