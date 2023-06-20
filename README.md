@@ -172,7 +172,8 @@ Test accuracy: 0.9824000000953674
    ```
    
    Here is an example of requirements.txt:
-   ``` 
+   
+``` 
 TensorFlow version: 2.12.0
 Keras version: 2.12.0
 wandb version: 0.15.4
@@ -220,6 +221,7 @@ print("urllib3 version:", urllib3.__version__)
 ```
 
 The output displays the versions of the installed libraries and indicates the availability of two GPUs:
+
 ```
 (myenv) root@e3afd40b59c8:/workspace# python  versions.py
 2023-06-20 20:05:23.119130: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
