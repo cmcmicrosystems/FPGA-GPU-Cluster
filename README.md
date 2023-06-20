@@ -19,7 +19,7 @@ https://www.cmc.ca/qsg-fpga-gpu-cluster/
 ```bash
 mkdir dockertmp
 ```
-
+We will use this directory inside the running docker container. 
 2. To use TensorFlow 1, run the following command:
 ```bash
 yassine@uwaccel01:~$ docker run --gpus all -it -v $(pwd)/dockertmp:/mnt nvcr.io/nvidia/tensorflow:22.01-tf1-py3
