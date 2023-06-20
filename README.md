@@ -79,7 +79,29 @@ The following step-by-step practical examples illustrate the two approaches: Con
    ```
    root@e3afd40b59c8:/workspace# python mnist.py
    ```
-   The output will show the script execution results.
+   The output will show the script execution results:
+   
+  ``` 
+   Num GPUs Available:  2
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+11501568/11490434 [==============================] - 0s 0us/step
+2023-06-20 19:54:56.708815: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 14635 MB memory:  -> device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0
+Num Logical GPUs:  1
+Epoch 1/5
+2023-06-20 19:54:59.171541: I tensorflow/stream_executor/cuda/cuda_dnn.cc:377] Loaded cuDNN version 8302
+1875/1875 [==============================] - 9s 3ms/step - loss: 0.2185 - accuracy: 0.9385 - val_loss: 0.0945 - val_accuracy: 0.9729
+Epoch 2/5
+1875/1875 [==============================] - 6s 3ms/step - loss: 0.0763 - accuracy: 0.9779 - val_loss: 0.0596 - val_accuracy: 0.9810
+Epoch 3/5
+1875/1875 [==============================] - 6s 3ms/step - loss: 0.0578 - accuracy: 0.9832 - val_loss: 0.0542 - val_accuracy: 0.9811
+Epoch 4/5
+1875/1875 [==============================] - 6s 3ms/step - loss: 0.0469 - accuracy: 0.9856 - val_loss: 0.0522 - val_accuracy: 0.9835
+Epoch 5/5
+1875/1875 [==============================] - 6s 3ms/step - loss: 0.0394 - accuracy: 0.9881 - val_loss: 0.0525 - val_accuracy: 0.9824
+313/313 - 1s - loss: 0.0525 - accuracy: 0.9824
+
+Test accuracy: 0.9824000000953674
+```
 
 ### Virtual environment setup
 
