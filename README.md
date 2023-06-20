@@ -11,7 +11,7 @@ The FPGA/GPU cluster supports three the most commonly used deep learning framewo
 This quick guide provides instructions on how to reserve, access, manage, and use the FPGA/GPU cluster nodes through the CMC cloud environment interface.
 https://www.cmc.ca/qsg-fpga-gpu-cluster/
 
-## Quick Start Guide
+## Quick Start Guide: Tensorflow with Docker
 
 ### Setting up the Environment
 
@@ -123,14 +123,81 @@ Test accuracy: 0.9824000000953674
    ```
    pip install tensorflow keras wandb scikit-image scipy numpy pandas matplotlib opencv-python pillow pydicom urllib3
    ```
-   Alternatively, you can save all these packages with their specific versions under a file called `requirements.txt` and install them using the following command:
+   Alternatively, you can save all these packages with their specific versions under `requirements.txt` and install them using the following command:
    ```
    pip install -r requirements.txt
    ```
-5. Test the virtual environment with all the available libraries by executing the provided code.
+   Here is an example of requirements.txt:
+   ``` 
+TensorFlow version: 2.12.0
+Keras version: 2.12.0
+wandb version: 0.15.4
+scikit-image version: 0.19.3
+scipy version: 1.10.1
+numpy version: 1.22.4
+pandas version: 1.5.3
+matplotlib version: 3.7.1
+OpenCV version: 4.7.0
+Pillow version: 8.4.0
+pydicom version: 2.4.0
+urllib3 version: 3.10
+```  
+5. Test the virtual environment with all the available libraries by executing the following code:
+```
+import tensorflow as tf
+import keras
+import wandb
+import skimage
+import scipy
+import numpy as np
+import pandas as pd
+import matplotlib
+import cv2
+import PIL
+import pydicom
+import urllib3
 
-   The output will display the versions of the installed libraries and indicate whether GPU support is available in TensorFlow.
+# Check GPU support in TensorFlow
+print("GPU support in TensorFlow:", tf.test.is_gpu_available())
 
+print("TensorFlow version:", tf.__version__)
+print("Keras version:", keras.__version__)
+print("wandb version:", wandb.__version__)
+print("scikit-image version:", skimage.__version__)
+print("scipy version:", scipy.__version__)
+print("numpy version:", np.__version__)
+print("pandas version:", pd.__version__)
+print("matplotlib version:", matplotlib.__version__)
+print("OpenCV version:", cv2.__version__)
+print("Pillow version:", PIL.__version__)
+print("pydicom version:", pydicom.__version__)
+print("urllib3 version:", urllib3.__version__)
+```
+
+   The output displays the versions of the installed libraries and indicate the availability of two GPUs:
+```
+(myenv) root@e3afd40b59c8:/workspace# python  versions.py
+2023-06-20 20:05:23.119130: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From versions.py:15: is_gpu_available (from tensorflow.python.framework.test_util) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.config.list_physical_devices('GPU')` instead.
+2023-06-20 20:05:28.637587: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Created device /device:GPU:0 with 14569 MB memory:  -> device: 0, name: Tesla V100-PCIE-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0
+2023-06-20 20:05:28.638372: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Created device /device:GPU:1 with 14569 MB memory:  -> device: 1, name: Tesla V100-PCIE-16GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+GPU support in TensorFlow: True
+TensorFlow version: 2.12.0
+Keras version: 2.12.0
+wandb version: 0.15.4
+scikit-image version: 0.21.0
+scipy version: 1.10.1
+numpy version: 1.23.5
+pandas version: 2.0.2
+matplotlib version: 3.7.1
+OpenCV version: 4.7.0
+Pillow version: 9.5.0
+pydicom version: 2.4.0
+urllib3 version: 1.26.16
+```
 ### Additional setup
 
 In some cases, additional setup steps may be required. For example, if you encounter OpenGL-related issues, you can update the package lists on the system and install the `libgl1-mesa-glx` package by running the following command:
