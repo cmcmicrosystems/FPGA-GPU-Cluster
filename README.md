@@ -117,8 +117,8 @@ model.fit(x_train, y_train, epochs=5, validation_data=(x_test, y_test))
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
 print('\nTest accuracy:', test_acc)
 ```
-4. Exit by clicking `ctrl+x` and type `y` to save the file.
-5. Execute the script by issuing the following command:
+3. Exit by clicking `ctrl+x` and type `y` to save the file.
+4. Execute the script by issuing the following command:
    ```
    root@e3afd40b59c8:/workspace# python mnist.py
    ```
