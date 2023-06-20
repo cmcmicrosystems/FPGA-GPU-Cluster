@@ -165,10 +165,12 @@ Test accuracy: 0.9824000000953674
    ```
    pip install tensorflow keras wandb scikit-image scipy numpy pandas matplotlib opencv-python pillow pydicom urllib3
    ```
+   
    Alternatively, you can save all these packages with their specific versions under `requirements.txt` and install them using the following command:
    ```
    pip install -r requirements.txt
    ```
+   
    Here is an example of requirements.txt:
    ``` 
 TensorFlow version: 2.12.0
@@ -183,7 +185,8 @@ OpenCV version: 4.7.0
 Pillow version: 8.4.0
 pydicom version: 2.4.0
 urllib3 version: 3.10
-```  
+```
+
 5. Test the virtual environment with all the available libraries by executing the following code:
 ```
 import tensorflow as tf
@@ -216,7 +219,7 @@ print("pydicom version:", pydicom.__version__)
 print("urllib3 version:", urllib3.__version__)
 ```
 
-   The output displays the versions of the installed libraries and indicate the availability of two GPUs:
+The output displays the versions of the installed libraries and indicates the availability of two GPUs:
 ```
 (myenv) root@e3afd40b59c8:/workspace# python  versions.py
 2023-06-20 20:05:23.119130: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
@@ -240,6 +243,7 @@ Pillow version: 9.5.0
 pydicom version: 2.4.0
 urllib3 version: 1.26.16
 ```
+
 ### Additional setup
 
 In some cases, additional setup steps may be required. For example, if you encounter OpenGL-related issues, you can update the package lists on the system and install the `libgl1-mesa-glx` package by running the following command:
