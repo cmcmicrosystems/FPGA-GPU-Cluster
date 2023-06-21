@@ -42,7 +42,7 @@ Overall, this command launches a Docker container based on the specified TensorF
 
 ### Command Output
 
-The output you provided is from running the command `docker run --gpus all -it -v $(pwd)/dockertmp:/mnt nvcr.io/nvidia/tensorflow:22.01-tf2-py3`. Here's the breakdown of the output:
+Here's the breakdown of the output:
 - The header section indicates the TensorFlow version and the NVIDIA release version of the container image. In this case, it is TensorFlow version 2.7.0 and NVIDIA Release 22.01-tf2.
 - The container image is provided by NVIDIA Corporation and its affiliates. The copyrights for the image and its contents are mentioned, and the terms and conditions of the NVIDIA Deep Learning Container License apply.
 - The output includes a note about the MOFED driver being detected, but the nv_peer_mem driver not being detected. This may affect the multi-node communication performance.
