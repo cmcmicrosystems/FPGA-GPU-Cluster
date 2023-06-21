@@ -42,6 +42,32 @@ Overall, this command launches a Docker container based on the specified TensorF
 
 ### Command Output
 
+```
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 22.01-tf2 (build 31081301)
+TensorFlow Version 2.7.0
+
+Container image Copyright (c) 2022, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright 2017-2022 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+NOTE: MOFED driver was detected, but nv_peer_mem driver was not detected.
+      Multi-node communication performance may be reduced.
+
+NOTE: The SHMEM allocation limit is set to the default of 64MB.  This may be
+   insufficient for TensorFlow.  NVIDIA recommends the use of the following flags:
+   docker run --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 ...![image](https://github.com/cmcmicrosystems/FPGA-GPU-Cluster/assets/9284879/7066fdc2-3c9f-436a-9f52-7dab010f54de)
+```
+
+
 Here's the breakdown of the output:
 - The header section indicates the TensorFlow version and the NVIDIA release version of the container image. In this case, it is TensorFlow version 2.7.0 and NVIDIA Release 22.01-tf2.
 - The container image is provided by NVIDIA Corporation and its affiliates. The copyrights for the image and its contents are mentioned, and the terms and conditions of the NVIDIA Deep Learning Container License apply.
