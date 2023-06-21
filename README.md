@@ -15,7 +15,7 @@ https://www.cmc.ca/qsg-fpga-gpu-cluster/
 
 ### Setting up the Environment
 
-1. For the first time only, create a directory called `dockertmp`:
+1. For the first time only, create a directory called `dockertmp` in your home directory:
 ```bash
 mkdir dockertmp
 ```
@@ -143,8 +143,8 @@ model.fit(x_train, y_train, epochs=5, validation_data=(x_test, y_test))
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=2)
 print('\nTest accuracy:', test_acc)
 ```
-3. Exit by clicking `ctrl+x` and type `y` to save the file.
-4. Execute the script by issuing the following command:
+3. Exit by clicking `ctrl+x` and type `y` to save the file. (Alternatively, you can copy mnist.py from this repo to $(pwd)/dockertmp on the host side, then access the file in the directory called /mnt on the container side)
+5. Execute the script by issuing the following command:
    ```
    root@e3afd40b59c8:/workspace# python mnist.py
    ```
@@ -215,7 +215,7 @@ pydicom version: 2.4.0
 urllib3 version: 3.10
 ```
 
-5. Test the virtual environment with all the available libraries by executing the following code:
+5. Test the virtual environment with all the available libraries by copying versions.py from this repo to $(pwd)/dockertmp on the host side, then access the file in the directory called /mnt on the container side:
 ```
 import tensorflow as tf
 import keras
