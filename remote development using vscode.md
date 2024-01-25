@@ -53,7 +53,7 @@ Where yourregisteredcmcemail is your user name and 49872 is the port number of t
 ```bash
 Host GPUNode
   HostName uwaccel.cmc.ca
-  User yassine.hariri@cmc.ca
+  User yourregisteredcmcemail
   Port 49872
 ```
 Save and close the file C:\Users\yassine\.ssh\config
